@@ -1,0 +1,11 @@
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\bin\Debug\UDPServer.exe.config
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\bin\Debug\UDPServer.exe
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\bin\Debug\UDPServer.pdb
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\bin\Debug\UDBCommon.dll
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\bin\Debug\UDBCommon.pdb
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\obj\Debug\UDPServer.csprojResolveAssemblyReference.cache
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\obj\Debug\UDPServer.ProjectInstaller.resources
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\obj\Debug\UDPServer.SmartYunShangService.resources
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\obj\Debug\UDPServer.csproj.GenerateResource.Cache
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\obj\Debug\UDPServer.exe
+E:\Zhangjl\Projects\MS\UDPServer\UDPServer\obj\Debug\UDPServer.pdb

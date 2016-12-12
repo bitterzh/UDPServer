@@ -1,0 +1,9 @@
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\bin\Debug\UPDForm.exe.config
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\bin\Debug\UPDForm.exe
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\bin\Debug\UPDForm.pdb
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\obj\Debug\UPDForm.csprojResolveAssemblyReference.cache
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\obj\Debug\UPDForm.UDPForm.resources
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\obj\Debug\UPDForm.Properties.Resources.resources
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\obj\Debug\UPDForm.csproj.GenerateResource.Cache
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\obj\Debug\UPDForm.exe
+E:\Zhangjl\Projects\MS\UDPServer\UPDForm\obj\Debug\UPDForm.pdb

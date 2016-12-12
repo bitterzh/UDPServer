@@ -1,0 +1,14 @@
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\UPDForm.exe.config
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\UPDForm.exe
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\UPDForm.pdb
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\Client\UPDClientForm.exe.config
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\Client\UPDClientForm.exe
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\Client\UPDClientForm.pdb
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\Client\UDBCommon.dll
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\bin\Debug\Client\UDBCommon.pdb
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\obj\Debug\UPDClientForm.csprojResolveAssemblyReference.cache
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\obj\Debug\UPDClientForm.Properties.Resources.resources
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\obj\Debug\UPDClientForm.UPDClientForm.resources
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\obj\Debug\UPDClientForm.csproj.GenerateResource.Cache
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\obj\Debug\UPDClientForm.exe
+E:\Zhangjl\Projects\MS\UDPServer\UPDClientForm\obj\Debug\UPDClientForm.pdb
