@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
+using System.Net.Sockets;
 using System.Windows.Forms;
 using UDBCommon;
 
@@ -9,18 +10,19 @@ namespace UPDClientForm
 {
     public partial class UPDClientForm : Form
     {
-        string _ip = "";
+        private int myport = 0;
         public UPDClientForm()
         {
             InitializeComponent();
 
             IPAddress[] ips = Dns.GetHostAddresses(Dns.GetHostName());
-            this.txtSHost.Text = this.txtHost.Text = ips[ips.Length - 1].ToString();
-            int port = 5110;
-            this.txtSPort.Text = this.txtPort.Text = port.ToString();
 
-            //IPAddress[] ips = Dns.GetHostAddresses(Dns.GetHostName());
-            //_ip = ips[ips.Length - 1].ToString();
+            this.txtHost.Text = UDPGlobal.ServerHost;
+            this.txtPort.Text = UDPGlobal.ServerPort.ToString();
+
+            this.txtSHost.Text = ips[ips.Length - 1].ToString();
+            myport = UDPGlobal.NewClientPort();
+            this.txtSPort.Text = myport.ToString();
         }
 
         private void btConnect_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace UPDClientForm
             {
                 string _host = this.txtHost.Text;
                 int _port = Convert.ToInt32(this.txtPort.Text);
-                if (UDPClient.Init(_host, _port))
+                if (UDPClient.Init(myport, _host, _port))
                 {
                     SetMsg("连接成功！");
 

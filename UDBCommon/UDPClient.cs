@@ -7,6 +7,7 @@ namespace UDBCommon
     public class UDPClient
     {
         private static UdpClient udpClient;
+        private static IPEndPoint server;
         public static string IP;
         public static string Port;
 
@@ -17,14 +18,29 @@ namespace UDBCommon
                 return udpClient;
             }
         }
-        public static bool Init(string host = "172.16.17.201", int port = 5110)
+        public static IPEndPoint Server
         {
-            udpClient = new UdpClient();
+            get
+            {
+                return server;
+            }
+        }
+        public static bool Init(int cport, string shost = "172.16.17.201", int sport = 5001)
+        {
             try
             {
-                //udpClient.JoinMulticastGroup(IPAddress.Parse(host));
-                udpClient.Connect(host, port);                
-
+                //udpClient = new UdpClient(new IPEndPoint(IPAddress.Any, port));
+                server = new IPEndPoint(IPAddress.Parse(shost), sport);
+                try
+                {
+                    udpClient = new UdpClient(new IPEndPoint(IPAddress.Any, cport));
+                }
+                catch
+                {
+                    udpClient = new UdpClient(new IPEndPoint(IPAddress.Any, cport + 1));
+                }
+                //udpClient = new UdpClient();
+                //udpClient.Connect(host, port);
                 return true;
             }
             catch

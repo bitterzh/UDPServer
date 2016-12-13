@@ -8,7 +8,7 @@ namespace UDBCommon
     {
 
         private static UdpClient receivingUdpClient;
-        public static bool Init(string host = "172.16.17.201", int port = 5110, Action<string> callback = null)
+        public static bool Init(string host = "172.16.17.201", int port = 5001, Action<string> callback = null)
         {
             try
             {

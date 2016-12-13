@@ -13,9 +13,12 @@ namespace UDBCommon
         /// <param name="callback"></param>
         public static void StartReceive(UdpClient receivingUdpClient, Action<string> callback = null, int port = 0, string ip = "")
         {
-            IPEndPoint _remoteIpEndPoint = new IPEndPoint(IPAddress.Any, 0);
+            IPEndPoint _remoteIpEndPoint;
             if (!string.IsNullOrEmpty(ip))
                 _remoteIpEndPoint = new IPEndPoint(IPAddress.Parse(ip), port);
+            else
+                _remoteIpEndPoint = new IPEndPoint(IPAddress.Any, port);
+
             try
             {
                 while (true)
@@ -42,6 +45,34 @@ namespace UDBCommon
             }
         }
 
+        public static void BroadcastReceive()
+        {
+            //try
+            //{
+            //    UdpClient udpClient = new UdpClient(5110);
+            //    IPEndPoint ep = new IPEndPoint(IPAddress.Any, 0);
+            //    while (true)
+            //    {
+            //        byte[] buffer = udpClient.Receive(ref ep);
+            //        string str = Encoding.UTF8.GetString(buffer, 0, buffer.Length);
+            //        string name = str.Split('&')[0];
+            //        string ip = str.Split('&')[1];
+            //        UDPUser user = new UDPUser(name, ip);
+            //        if (!userList.Contains(user))
+            //        {
+            //            userList.Add(user);
+            //            UpdateUserList();
+            //        }
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("端口已被占用!", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    this.Close();
+            //    Application.Exit();
+            //}
+
+        }
         private static string DealWithRequest(string request, IPEndPoint point)
         {
             if (request == UDPAgreement.FindDevice)
@@ -96,10 +127,7 @@ namespace UDBCommon
             int _result = -1;
 
             IPEndPoint host = new IPEndPoint(IPAddress.Parse(ip), port);
-            if (string.IsNullOrEmpty(ip) && port > 0)
-                _result = sendUdpClient.Send(_sData, _sData.Length, host);
-            else
-                _result = sendUdpClient.Send(_sData, _sData.Length);
+            _result = sendUdpClient.Send(_sData, _sData.Length, host);
 
             if (callback != null)
             {
@@ -118,7 +146,7 @@ namespace UDBCommon
             }
             int _result = -1;
 
-            IPEndPoint host = new IPEndPoint(IPAddress.Parse("255.255.255.255"), port);
+            IPEndPoint host = new IPEndPoint(IPAddress.Parse("172.16.17.255"), port);
             _result = sendUdpClient.Send(_sData, _sData.Length, host);
 
             if (callback != null)

@@ -14,9 +14,18 @@ namespace UPDServerForm
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UPDServerForm());
+            System.Diagnostics.Process _RunProcess = System.Diagnostics.Process.GetCurrentProcess();
+            System.Diagnostics.Process[] _Process = System.Diagnostics.Process.GetProcessesByName(_RunProcess.ProcessName);
+            if (_Process.Length == 1)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new UPDServerForm());
+            }
+            else
+            {
+                MessageBox.Show("程序已经打开!", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
